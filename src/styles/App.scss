@@ -7,9 +7,8 @@
   border: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  scrollbar-width: none;
 }
-body {
+body{
   background: $Color-Fondo center fixed;
   height: 100%;
 }
@@ -18,7 +17,6 @@ ul {
   text-decoration: none;
   list-style: none;
 }
-button,
-input {
+button, input{
   outline: none;
 }
