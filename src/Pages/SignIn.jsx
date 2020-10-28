@@ -11,7 +11,7 @@ import { useFetchmusic } from '../hooks/useFetchmusic';
  const SignIn = () => {
        //FETCH Albums (call toAPI)
        const [albumList] = useFetchAlbum('https://mastersound-backend.azurewebsites.net/api/albums/new-releases')
-    console.log(albumList);
+    
        //FETCH songs(call to API)
        const [music] = useFetchmusic('https://mastersound-backend.azurewebsites.net/api/albums/')
        

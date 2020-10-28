@@ -18,6 +18,13 @@
 .AlbumSection::-webkit-scrollbar{
   display: none;
 }
+
+/*
+.AlbumSection:hover {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(77, 36, 8, 0.945);
+}
+*/
 .CircleAlbum__garden:hover .CircleAlbum__container {
   opacity: 0.3;
 }
