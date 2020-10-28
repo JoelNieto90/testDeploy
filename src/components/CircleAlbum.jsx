@@ -1,16 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
-import Cover from '../Assets/RollingCover.jpeg'
 import '../styles/componentsStyles/CircleAlbum.scss'
 
 
-const CircleAlbum = ({ AlbumName, ArtistName }) => {
+const CircleAlbum = (props) => {
+    const { id, cover_image_url, name } = props;
 
     return(
         <div className="CircleAlbum__container">
-            <img src={Cover} alt='Cover'/>
-            <h6>{AlbumName}</h6>
-            <p>{ArtistName}</p>
+            <Link to={`/album/${id}`}>
+                <img src={cover_image_url} alt='Cover'/>
+            </Link>
+            <h6>{name}</h6>
+            <p>{name}</p>
         </div>
     )
 }

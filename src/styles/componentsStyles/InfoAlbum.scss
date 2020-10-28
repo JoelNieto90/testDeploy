@@ -7,7 +7,10 @@
   width: 98%;
   margin: 39px 0px 35px 30px;
   &__img {
-    height: 466px;
+    height: 467px;
+    width: 226px;
+    object-fit: cover;
+    border-radius: 10px;
   }
   &__Subtitle {
     display: flex;
@@ -15,14 +18,13 @@
     margin-left: 24px;
     color: #f2ebef;
     &--text {
-      margin-top: 21px;
       font-size: 10px;
       line-height: 14px;
       font-weight: 600;
     }
     &--NameAlbum {
       margin-top: 17px;
-      font-size: 50px;
+      font-size: 30px;
       line-height: 22px;
       font-weight: 700;
     }

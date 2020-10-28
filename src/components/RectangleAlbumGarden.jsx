@@ -5,6 +5,7 @@ import '../styles/componentsStyles/RectangleAlbumGarden.scss'
 
 
 const RectangleAlbumGarden = ({ SectionName }) => {
+    const albumLocalStorage = JSON.parse( localStorage.getItem("albums"))
 
     return(
         <div className="RectangleAlbum__garden">
@@ -12,22 +13,11 @@ const RectangleAlbumGarden = ({ SectionName }) => {
                 <h3>{SectionName}</h3>
             </section>
             <section className='AlbumSection__Rectangle'>
-                <RectangleAlbum AlbumName='Let It Bleed' ArtistName='Rolling Stone'/>
-                <RectangleAlbum AlbumName='Let It Bleed' ArtistName='Rolling Stone'/>
-                <RectangleAlbum AlbumName='Let It Bleed' ArtistName='Rolling Stone'/>
-                <RectangleAlbum AlbumName='Let It Bleed' ArtistName='Rolling Stone'/>
-                <RectangleAlbum AlbumName='Let It Bleed' ArtistName='Rolling Stone'/>
-                <RectangleAlbum AlbumName='Let It Bleed' ArtistName='Rolling Stone'/>
-                <RectangleAlbum AlbumName='Let It Bleed' ArtistName='Rolling Stone'/>
-                <RectangleAlbum AlbumName='Let It Bleed' ArtistName='Rolling Stone'/>
-                <RectangleAlbum AlbumName='Let It Bleed' ArtistName='Rolling Stone'/>
-                <RectangleAlbum AlbumName='Let It Bleed' ArtistName='Rolling Stone'/>
-                <RectangleAlbum AlbumName='Let It Bleed' ArtistName='Rolling Stone'/>
-                <RectangleAlbum AlbumName='Let It Bleed' ArtistName='Rolling Stone'/>
-                <RectangleAlbum AlbumName='Let It Bleed' ArtistName='Rolling Stone'/>
-                <RectangleAlbum AlbumName='Let It Bleed' ArtistName='Rolling Stone'/>
-                <RectangleAlbum AlbumName='Let It Bleed' ArtistName='Rolling Stone'/>
-                <RectangleAlbum AlbumName='Let It Bleed' ArtistName='Rolling Stone'/>
+                {
+                albumLocalStorage.map((item) => (
+                    <RectangleAlbum data={item} key={item.spt_album_id} {...item}/>
+                    ))
+                }
                 
             </section>
         </div>

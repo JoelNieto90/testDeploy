@@ -8,9 +8,15 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
+body{
+  background: $Color-Fondo center fixed;
+  height: 100%;
+}
 a,
 ul {
   text-decoration: none;
   list-style: none;
+}
+button, input{
+  outline: none;
 }

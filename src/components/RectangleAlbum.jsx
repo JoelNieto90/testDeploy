@@ -1,19 +1,22 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 import '../styles/componentsStyles/RectangleAlbum.scss'
-import albumCover from '../Assets/RollingCover.jpeg'
 
-const RectangleAlbum = ({ AlbumName, ArtistName }) => {
+const RectangleAlbum = (props) => {
+    const {  spt_album_id, cover_image_url, name  } = props;
     return(
-        <div className='RectangleCover'>
-            <img src={albumCover} alt='cover' />
-            <div className="AlbumDetails">
-                <div className='AlbumDetails__information'>
-                    <h3>{AlbumName}</h3>
-                    <p>{ArtistName}</p>
+        <Link to={`/album/${spt_album_id}`}>
+            <div className='RectangleCover'>
+                <img src={cover_image_url} alt='cover' />
+                <div className="AlbumDetails">
+                    <div className='AlbumDetails__information'>
+                        <h3>{name}</h3>
+                        <p>{name}</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

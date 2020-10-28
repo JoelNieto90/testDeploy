@@ -5,7 +5,24 @@ import Logo from '../Assets/Icons/logo.svg';
 import Input from '../components/Input';
 import ButtonWhite from '../components/ButtonWhite';
 
+import { useFetchAlbum } from '../hooks/useFetchAlbum';
+import { useFetchmusic } from '../hooks/useFetchmusic';
+
  const SignIn = () => {
+       //FETCH Albums (call toAPI)
+       const [albumList] = useFetchAlbum('https://mastersound-backend.azurewebsites.net/api/albums/new-releases')
+    console.log(albumList);
+       //FETCH songs(call to API)
+       const [music] = useFetchmusic('https://mastersound-backend.azurewebsites.net/api/albums/')
+       
+     
+       // __________________LOCAL STORAGE_____________________
+       // se guarda la llamada de los albums
+       localStorage.setItem( "albums", JSON.stringify( albumList ))
+     
+       // se guarda la llamada de las canciones
+       localStorage.setItem ( "songs", JSON.stringify ( music ))
+       
         return(
             <main className='mainSignIn'>
                 <img src={Logo} alt='Logo' />

@@ -5,6 +5,7 @@ import '../styles/componentsStyles/CircleAlbumGarden.scss'
 
 
 const CircleAlbumGarden = ({ SectionName }) => {
+    const albumLocalStorage = JSON.parse( localStorage.getItem("albums"))
 
     return(
         <div className="CircleAlbum__garden">
@@ -12,21 +13,11 @@ const CircleAlbumGarden = ({ SectionName }) => {
                 <h3>{SectionName}</h3>
             </section>
             <section className='AlbumSection'>
-                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
-                <CircleAlbum AlbumName='Let It Bleed'ArtistName='Rolling Stones'/>
+                {
+                albumLocalStorage.map((item) => (
+                    <CircleAlbum data={item} key={item.id} {...item}/>
+                ))
+              }
             </section>
         </div>
     )

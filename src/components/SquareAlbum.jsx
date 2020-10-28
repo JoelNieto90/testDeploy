@@ -1,16 +1,20 @@
 import React from 'react';
-import '../styles/componentsStyles/SquareAlbum.scss'
-import ArtistImg from '../Assets/RollingCover.jpeg'
+import { Link } from 'react-router-dom';
 
-const SquareAlbum = ({ album, artist }) => {
-  return (
-    <>
+import '../styles/componentsStyles/SquareAlbum.scss'
+
+
+const SquareAlbum = (props) => {
+    const { spt_album_id, cover_image_url, name } = props;
+    
+    return (
       <div className='SquareAlbum__container'>
-        <img src={ArtistImg} alt="Artist"/>
-        <p>{album}</p>
-        <span>{artist}</span>
-      </div>
-    </>
+        <Link to={`/album/${spt_album_id}`}>
+          <img src={cover_image_url} alt="Cover Album"/>
+        </Link>
+          <p>{name}</p>
+          <span>{name}</span>
+        </div>
   )
 }
 

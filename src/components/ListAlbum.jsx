@@ -5,20 +5,20 @@ import '../styles/componentsStyles/ListAlbum.scss';
 import { FavouriteIcon, DownloadItemsIcon, ShareIcon, PlusIcon } 
 from '../components/Icons';
 
-const ListAlbum = ({number, icon, song, reproductions, time}) => {
+const ListAlbum = (props) => {
     return (
         <Fragment>
             <section className='listAlbum'>
-                <p className='listAlbum__Number'>{number}</p>
+                <p className='listAlbum__Number'>{props.data.cant}</p>
                 <button className='listAlbum__Favourite'>
                     {<FavouriteIcon />}
                 </button>
                 <button className='listAlbum__Plus'>
                     {<PlusIcon />}
                 </button>
-                <button className='listAlbum__Song'>{song}</button>
-                <p className='listAlbum__Reproductions'>{reproductions}</p>
-                <p className='listAlbum__Time'>{time}</p>
+                <button className='listAlbum__Song'>{props.data.name}</button>
+                <p className='listAlbum__Reproductions'>{props.data.name}</p>
+                <p className='listAlbum__Time'>{props.data.name}</p>
                 <button className='listAlbum__Download'>
                     {<DownloadItemsIcon />}
                 </button>
