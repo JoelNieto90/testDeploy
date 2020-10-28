@@ -17,7 +17,7 @@ function InfoAlbum(props) {
                 <section className='InfoAlbum__Subtitle'>
                     <p className='InfoAlbum__Subtitle--text'>Album</p>
                     <p className='InfoAlbum__Subtitle--NameAlbum'>{props.data.name}</p>
-                    <p className='InfoAlbum__Subtitle--Artist'>{props.data.artists.name}</p>
+                    <p className='InfoAlbum__Subtitle--Artist'>{props.data.name}</p>
                     <p className='InfoAlbum__Subtitle--Description'>{props.data.name}</p>
                             {
                                 ingredients.map( (item) => (
