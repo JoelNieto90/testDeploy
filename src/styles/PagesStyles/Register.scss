@@ -1,0 +1,38 @@
+@import '../App.scss';
+
+body{
+    background: $Color-Fondo  center fixed;
+    height: 100%;
+}
+
+.mainRegister {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $Source-Pro;
+    font-weight: $weight3;
+    color: white;
+    height: 100vh;
+    img {
+        width: 224px;
+        margin-bottom: 40px;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        label {
+            margin-left: 20px;
+        }
+        &--link {
+            display: flex;
+            flex-direction: column;
+            a {
+                color: white;
+                text-align: center;
+                margin-bottom: 17px;
+            }
+        }
+    }
+}

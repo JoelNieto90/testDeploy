@@ -1,0 +1,16 @@
+@import "./Vars.scss";
+@import "./Media.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a,
+ul {
+  text-decoration: none;
+  list-style: none;
+}
